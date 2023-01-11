@@ -7,6 +7,7 @@ export default createStore({
     areProgramsLoaded: false,
     reviews: null,
     areReviewsLoaded: false,
+    isFormSent: false,
   },
   getters: {
     getPrograms(state) {
@@ -35,6 +36,9 @@ export default createStore({
     setAreReviewsLoaded(state, payload) {
       state.areReviewsLoaded = payload;
     },
+    setIsFormSent(state, payload) {
+      state.isFormSent = payload;
+    },
   },
   actions: {
     fetchPrograms({ commit }) {
@@ -57,5 +61,17 @@ export default createStore({
             console.log(err);
           });
     },
+
+    sendForm({ commit }, { name, text}) {
+      axios.post('/somewhere', {
+        name,
+        text,
+      }).then((res) => {
+        console.log(res.data);
+        commit('setIsFormSent', true);
+      }).catch((err) => {
+        console.log(err);
+      });
+    }
   },
 });
