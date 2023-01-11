@@ -1,0 +1,23 @@
+.content-container {
+  max-width: 1520px;
+  margin-inline: auto;
+  padding-inline: 25px;
+  box-sizing: content-box;
+
+  @include to(1600) {
+    max-width: 1260px;
+  }
+
+  @include to(1340) {
+    max-width: 1080px;
+  }
+
+  @include to(1140) {
+    max-width: 900px;
+  }
+
+  @include to(992) {
+    max-width: none;
+    padding-inline: clamp(25px, 5%, 50px);
+  }
+}
