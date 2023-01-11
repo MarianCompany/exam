@@ -1,0 +1,82 @@
+.cap {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 45% 1fr;
+  column-gap: 50px;
+  padding-top: 30px;
+  
+  &__title {
+    font-family: Exo2, sans-serif;
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 115%;
+    color: #fff;
+  }
+
+  &__text {
+    margin-top: 15px;
+    font-family: Exo2, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #fff;
+  }
+
+  &__company {
+    position: relative;
+    font-weight: 700;
+    background: -webkit-linear-gradient(90deg, #5b2dff 0%, #6000ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: translate(0, 3px);
+      width: 100%;
+      height: 2px;
+      border-radius: 5px;
+      background: #fff;
+      box-shadow: 0 0 10px #FFFFFF, 0 0 10px #AC49FF, 0 0 5px 2px #AC49FF;
+    }
+  }
+
+  &__btn {
+    display: inline-block;
+    position: relative;
+    padding: 10px 25px;
+    margin-top: 25px;
+    border-radius: 50px;
+    font-family: Exo2, sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #fff;
+    background-color: #9216FB;
+    text-decoration: none;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50px;
+      box-shadow: 0 0 18px #C824C4;
+      transition: opacity 0.25s;
+      opacity: 0;
+    }
+
+    &:hover:after {
+      opacity: 1;
+    }
+  }
+
+
+
+  &__img {
+    width: 100%;
+    mix-blend-mode: lighten;
+  }
+}

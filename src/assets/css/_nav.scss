@@ -6,7 +6,7 @@
   &__title {
     font-family: Exo2, sans-serif;
     font-weight: 700;
-    font-size: 32px;
+    font-size: 42px;
     background: -webkit-linear-gradient(90deg, #5b2dff 0%, #6000ff 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -22,7 +22,7 @@
     margin-right: 15px;
     font-family: Exo2, sans-serif;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 24px;
     color: #fff;
     text-decoration: none;
 
@@ -32,6 +32,25 @@
 
     &:hover {
       text-decoration: underline;
+    }
+  }
+
+  &__avatar-block {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__avatar-text {
+    margin-left: 10px;
+    font-family: Exo2, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #fff;
+
+    &_highlighted {
+      text-decoration: underline;
+      color: #6000ff;
     }
   }
 }

@@ -21,12 +21,15 @@ export default {
             Программы тренировок
           </router-link>
         </div>
-        <div class="nav__block">
+        <div class="nav__block nav__avatar-block">
           <v-avatar
             color="#9216FB"
           >
             MA
           </v-avatar>
+          <p class="nav__avatar-text">
+            Привет, <span class="nav__avatar-text_highlighted">marinad</span>!
+          </p>
         </div>
       </nav>
     </div>
