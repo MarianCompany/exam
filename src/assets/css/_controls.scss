@@ -29,6 +29,7 @@
     background-color: transparent;
     border-radius: 50px;
     outline: none;
+    transition: all 0.25s;
 
     &:last-child {
       margin-right: 0;
@@ -36,6 +37,10 @@
 
     &_sort {
       padding: 10px 8px 10px 15px;
+    }
+
+    &_active {
+      background: #9216FB;
     }
   }
 
