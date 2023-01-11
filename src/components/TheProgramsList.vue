@@ -142,7 +142,6 @@ export default {
           >
             По популярности
             <img
-                v-show="sortBy && sortBy.startsWith('popularity')"
                 src="/img/chevron.svg"
                 class="controls__btn-chevron"
                 :class="{

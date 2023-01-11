@@ -14,7 +14,7 @@
   }
 
   &__input {
-    width: 100%;
+    max-width: 100%;
     position: relative;
     padding: 10px 15px;
     font-family: Exo2, sans-serif;
@@ -34,7 +34,7 @@
   }
 
   &__textarea {
-    width: 100%;
+    max-width: 100%;
     position: relative;
     margin-top: 15px;
     padding: 10px 15px;

@@ -22,6 +22,17 @@
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 60px;
+
+    @include to(1340) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 45px;
+    }
+
+    @include to(767) {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      gap: 30px;
+    }
+
   }
 
   &__item {
@@ -32,6 +43,10 @@
     border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 15px;
     text-decoration: none;
+
+    @include to(992) {
+      padding: 15px;
+    }
   }
 
   &__cap {
@@ -64,6 +79,10 @@
     font-size: 18px;
     line-height: 125%;
     color: #fff;
+
+    @include to(992) {
+      font-size: 16px;
+    }
   }
   
   &__footer {
@@ -79,6 +98,10 @@
     font-size: 42px;
     line-height: 120%;
     color: #D958FA;
+
+    @include to(992) {
+      font-size: 32px;
+    }
   }
 
   &__link {

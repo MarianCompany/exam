@@ -7,6 +7,10 @@
     font-weight: 900;
     font-size: 48px;
     color: #fff;
+
+    @include to(992) {
+      font-size: 36px;
+    }
   }
   
   &__list {
@@ -14,6 +18,11 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 50px;
     margin-top: 30px;
+
+    @include to(767) {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      gap: 30px;
+    }
   }
 
   &__item {
@@ -21,6 +30,14 @@
     border: 2px solid #AC49FF;
     box-shadow: 0 0 20px rgba(255, 186, 211, 0.16), 0 0 18px #C824C4;
     border-radius: 30px;
+
+    @include to(992) {
+      padding: 20px;
+    }
+
+    @include to(767) {
+      box-shadow: 0 0 10px rgba(255, 186, 211, 0.16), 0 0 9px #C824C4;
+    }
   }
 
   &__name {
@@ -28,12 +45,17 @@
     font-weight: 700;
     font-size: 28px;
     color: #AC49FF;
+
+    @include to(992) {
+      font-size: 24px;
+    }
   }
 
   &__date {
     font-weight: 400;
     font-size: 14px;
     color: #fff;
+
   }
 
   &__text {
@@ -43,6 +65,10 @@
     font-size: 20px;
     color: #fff;
     line-height: 120%;
+
+    @include to(992) {
+      font-size: 16px;
+    }
   }
 
   &__form {

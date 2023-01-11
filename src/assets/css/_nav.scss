@@ -3,6 +3,11 @@
   align-items: center;
   justify-content: space-between;
 
+  @include to(992) {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
   &__title {
     font-family: Exo2, sans-serif;
     font-weight: 700;
@@ -10,12 +15,20 @@
     background: -webkit-linear-gradient(90deg, #5b2dff 0%, #6000ff 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    @include to(576) {
+      font-size: 36px;
+    }
   }
 
   &__links {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+
+    @include to(992) {
+      margin-top: 15px;
+    }
   }
 
   &__link {
@@ -33,12 +46,20 @@
     &:hover {
       text-decoration: underline;
     }
+
+    @include to(576) {
+      font-size: 18px;
+    }
   }
 
   &__avatar-block {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+
+    @include to(992) {
+      margin-top: 15px;
+    }
   }
 
   &__avatar-text {

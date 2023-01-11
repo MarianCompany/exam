@@ -4,6 +4,25 @@
   grid-template-columns: 45% 1fr;
   column-gap: 50px;
   padding-top: 30px;
+
+  @include to(992) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  &__description {
+    @include to(992) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+      margin-bottom: 25px;
+    }
+
+    @include to(576) {
+      margin-top: 30px;
+    }
+  }
   
   &__title {
     font-family: Exo2, sans-serif;
@@ -11,6 +30,18 @@
     font-weight: 900;
     line-height: 115%;
     color: #fff;
+
+    @include to(1140) {
+      font-size: 36px;
+    }
+
+    @include to(992) {
+      text-align: center;
+    }
+
+    @include to(576) {
+      font-size: 28px;
+    }
   }
 
   &__text {
@@ -19,6 +50,18 @@
     font-size: 24px;
     font-weight: 400;
     color: #fff;
+
+    @include to(1140) {
+      font-size: 20px;
+    }
+
+    @include to(992) {
+      text-align: center;
+    }
+
+    @include to(576) {
+      font-size: 16px;
+    }
   }
 
   &__company {

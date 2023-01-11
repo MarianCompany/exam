@@ -4,6 +4,12 @@
   align-items: flex-start;
   justify-content: space-between;
 
+  @include to(767) {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
   &__title {
     font-family: Exo2, sans-serif;
     font-weight: 400;
