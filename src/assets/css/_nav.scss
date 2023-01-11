@@ -16,6 +16,10 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
+    @include to(1140) {
+      font-size: 36px;
+    }
+
     @include to(576) {
       font-size: 36px;
     }
@@ -28,6 +32,8 @@
 
     @include to(992) {
       margin-top: 15px;
+      flex-wrap: wrap;
+      gap:10px;
     }
   }
 
@@ -36,6 +42,7 @@
     font-family: Exo2, sans-serif;
     font-weight: 500;
     font-size: 24px;
+    line-height: 100%;
     color: #fff;
     text-decoration: none;
 
@@ -47,8 +54,18 @@
       text-decoration: underline;
     }
 
+    @include to(1140) {
+      margin-right: 10px;
+      font-size: 14px;
+    }
+
     @include to(576) {
       font-size: 18px;
+    }
+
+    &_sm {
+      margin-right: 10px;
+      font-size: 14px;
     }
   }
 

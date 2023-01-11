@@ -20,6 +20,15 @@ export default {
           <a href="#programs" class="nav__link">
             Программы тренировок
           </a>
+          <a href="/data/products.json" class="nav__link nav__link_sm">
+            Программы
+          </a>
+          <a href="/data/reviews.json" class="nav__link nav__link_sm">
+            Отзывы
+          </a>
+          <a href="https://github.com/MarianCompany/exam" class="nav__link nav__link_sm">
+            Git-репо
+          </a>
         </div>
         <div class="nav__block nav__avatar-block">
           <v-avatar
