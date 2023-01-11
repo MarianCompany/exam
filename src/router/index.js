@@ -5,12 +5,10 @@ import CardView from "@/views/CardView";
 const routes = [
   {
     path: '/',
-    name: 'main',
     component: MainView,
   },
   {
     path: '/programs/:id',
-    name: 'program',
     component: CardView,
   },
 ];

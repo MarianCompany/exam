@@ -17,9 +17,9 @@ export default {
           <router-link to="/" class="nav__link">
             Главная
           </router-link>
-          <router-link to="/products" class="nav__link">
+          <a href="#programs" class="nav__link">
             Программы тренировок
-          </router-link>
+          </a>
         </div>
         <div class="nav__block nav__avatar-block">
           <v-avatar

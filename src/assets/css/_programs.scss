@@ -31,6 +31,7 @@
     padding: 20px;
     border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 15px;
+    text-decoration: none;
   }
 
   &__cap {
@@ -92,6 +93,32 @@
     top: 0;
     left: 0;
     transform: translate(-50%, -50%);
-    fill: #9216FB;
+  }
+}
+
+.program {
+  &__item {
+    margin-top: 50px;
+  }
+
+  &__title {
+    font-family: Exo2, sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: #fff;
+  }
+
+  &__text {
+    margin-top: 15px;
+    font-family: Exo2, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #fff;
+
+    &_highlighted {
+      font-size: 24px;
+      font-weight: 700;
+      color: #D958FA;
+    }
   }
 }

@@ -90,10 +90,11 @@ export default {
           </div>
         </div>
         <div class="programs__list">
-          <div
+          <router-link
               v-for="item in programs"
               class="programs__item"
               :key="item.title"
+              :to="`/programs/${item.id}`"
           >
             <img v-if="item.popularity > 7.5" src="/img/fire.svg" alt="" class="programs__fire" fill="#9216FB">
             <div class="programs__cap">
@@ -115,7 +116,7 @@ export default {
                 Записаться
               </router-link>
             </div>
-          </div>
+          </router-link>
         </div>
       </div>
     </div>
