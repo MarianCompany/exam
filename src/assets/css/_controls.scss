@@ -1,0 +1,57 @@
+.controls {
+  margin-top: 15px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  &__title {
+    font-family: Exo2, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #fff;
+  }
+
+  &__wrap {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__btn {
+    margin-right: 10px;
+    padding: 10px 15px;
+    font-family: Exo2, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: transparent;
+    border-radius: 50px;
+    outline: none;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &_sort {
+      padding: 10px 8px 10px 15px;
+    }
+  }
+
+  &__btn-chevron {
+    width: 10px;
+    display: inline-block;
+    transform-origin: center;
+    transition: all 0.25s;
+    opacity: 0;
+
+    &_active {
+      opacity: 1;
+    }
+
+    &_up {
+      transform: rotate(-180deg);
+    }
+  }
+}
