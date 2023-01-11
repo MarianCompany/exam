@@ -5,6 +5,8 @@ export default createStore({
   state: {
     programs: null,
     areProgramsLoaded: false,
+    reviews: null,
+    areReviewsLoaded: false,
   },
   getters: {
     getPrograms(state) {
@@ -12,15 +14,26 @@ export default createStore({
     },
     getAreProgramsLoaded(state) {
       return state.areProgramsLoaded;
-    }
+    },
+    getReviews(state) {
+      return state.reviews;
+    },
+    getAreReviewsLoaded(state) {
+      return state.areReviewsLoaded;
+    },
   },
   mutations: {
     setPrograms(state, payload) {
       state.programs = payload;
     },
-
     setAreProgramsLoaded(state, payload) {
       state.areProgramsLoaded = payload;
+    },
+    setReviews(state, payload) {
+      state.reviews = payload;
+    },
+    setAreReviewsLoaded(state, payload) {
+      state.areReviewsLoaded = payload;
     },
   },
   actions: {
@@ -34,7 +47,15 @@ export default createStore({
             console.log(err);
           });
     },
+    fetchReviews({ commit }) {
+      axios
+          .get('/data/reviews.json')
+          .then((res) => {
+            commit('setReviews', res.data);
+            commit('setAreReviewsLoaded', true);
+          }).catch((err) => {
+            console.log(err);
+          });
+    },
   },
-  modules: {
-  }
-})
+});

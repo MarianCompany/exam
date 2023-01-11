@@ -1,0 +1,51 @@
+.review {
+  margin-top: 50px;
+  
+  &__title {
+    text-align: center;
+    font-family: Exo2, sans-serif;
+    font-weight: 900;
+    font-size: 48px;
+    color: #fff;
+  }
+  
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 50px;
+    margin-top: 30px;
+  }
+
+  &__item {
+    padding: 30px;
+    border: 2px solid #AC49FF;
+    box-shadow: 0 0 20px rgba(255, 186, 211, 0.16), 0 0 18px #C824C4;
+    border-radius: 30px;
+  }
+
+  &__name {
+    font-family: Exo2, sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    color: #AC49FF;
+  }
+
+  &__date {
+    font-weight: 400;
+    font-size: 14px;
+    color: #fff;
+  }
+
+  &__text {
+    margin-top: 15px;
+    font-family: Exo2, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #fff;
+    line-height: 120%;
+  }
+
+  &__form {
+    margin-top: 30px;
+  }
+}

@@ -1,3 +1,37 @@
+<script>
+import {mapActions, mapGetters} from "vuex";
+
+export default {
+  name: "MainView",
+  data: () => {
+    return {
+
+    }
+  },
+
+  methods: {
+    ...mapActions({
+      fetchPrograms: 'fetchPrograms',
+      fetchReviews: 'fetchReviews',
+    }),
+  },
+
+  computed: {
+    ...mapGetters({
+      areProgramsLoaded: 'getAreProgramsLoaded',
+      programs: 'getPrograms',
+      areReviewsLoaded: 'getAreReviewsLoaded',
+      reviews: 'getReviews',
+    }),
+  },
+
+  created() {
+    this.fetchPrograms();
+    this.fetchReviews();
+  }
+}
+</script>
+
 <template>
   <div class="container">
     <div class="cap">
@@ -9,7 +43,7 @@
         <p class="cap__text">
           Начни новую жизнь вместе с <span class="cap__company">Fitness4You</span>! <br> Для современного человека, забота о физическом состоянии — ключевой фактор к достижению целей. Запишись всего в пару кликов вместе с нами!
         </p>
-        <a href="#programs" class="cap__btn">
+        <a href="#programs" class="btn cap__btn">
           Записаться
         </a>
       </div>
@@ -77,7 +111,7 @@
               <p class="programs__price">
                 {{ item.price }} ₽
               </p>
-              <router-link to="" class="programs__link">
+              <router-link to="" class="btn programs__link">
                 Записаться
               </router-link>
             </div>
@@ -85,35 +119,35 @@
         </div>
       </div>
     </div>
+    <div class="review">
+      <h4 class="review__title">
+         Отзывы
+      </h4>
+      <div class="review__list" v-if="areReviewsLoaded">
+        <div class="review__item" v-for="item in reviews" :key="item.name">
+          <p class="review__name">
+            {{ item.name }}
+            <span class="review__date">
+              {{ item.date }}
+            </span>
+          </p>
+          <p class="review__text">
+            {{ item.text }}
+          </p>
+        </div>
+      </div>
+      <form action="" class="form review__form">
+        <h4 class="form__title">
+          Оставить отзыв:
+        </h4>
+        <div class="form__wrap">
+          <input type="text" class="form__input" inputmode="text" name="name" placeholder="Ваше имя">
+          <textarea name="text" id="" cols="30" rows="5" placeholder="Ваш отзыв" class="form__textarea"></textarea>
+          <button class="btn form__btn">
+            Отправить
+          </button>
+        </div>
+      </form>
+    </div>
   </div>
 </template>
-
-<script>
-import {mapActions, mapGetters} from "vuex";
-
-export default {
-  name: "MainView",
-  data: () => {
-    return {
-
-    }
-  },
-
-  methods: {
-    ...mapActions({
-      fetchPrograms: 'fetchPrograms',
-    }),
-  },
-
-  computed: {
-    ...mapGetters({
-      areProgramsLoaded: 'getAreProgramsLoaded',
-      programs: 'getPrograms',
-    }),
-  },
-
-  created() {
-    this.fetchPrograms();
-  }
-}
-</script>
