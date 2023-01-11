@@ -9,28 +9,30 @@ export default {
     <div class="container">
       <nav class="nav">
         <div class="nav__block">
-          <h4 class="nav__title">
-            <router-link to="/">
-              Fitness4You
-            </router-link>
-          </h4>
+          <router-link to="/" class="nav__title">
+            Fitness4You
+          </router-link>
         </div>
-        <div class="nav__block">
-          <router-link to="/">
+        <div class="nav__block nav__links">
+          <router-link to="/" class="nav__link">
             Главная
           </router-link>
-          <router-link to="/products">
+          <router-link to="/products" class="nav__link">
             Программы тренировок
           </router-link>
         </div>
         <div class="nav__block">
           <v-avatar
-            color=""
+            color="#9216FB"
           >
-
+            MA
           </v-avatar>
         </div>
       </nav>
     </div>
   </header>
 </template>
+
+<style lang="scss">
+  @import '@/assets/css/main.scss';
+</style>

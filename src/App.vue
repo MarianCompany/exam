@@ -11,15 +11,17 @@ export default {
 </script>
 
 <template>
-  <TheHeader />
+  <div class="body">
+    <TheHeader />
 
-  <main>
-    <router-view/>
-  </main>
+    <main>
+      <router-view/>
+    </main>
 
-  <TheFooter />
+    <TheFooter />
+  </div>
 </template>
 
 <style lang="scss">
-@import '@/assets/css/main.scss';
+  @import '@/assets/css/main.scss';
 </style>
